@@ -11,7 +11,27 @@ class   Formule1
 
     public function shiftGear()
     {
-        $this->speed += 25;
+        $this->setSpeed($this->getSpeed() + 25);
+    }
+
+    /**
+     * Get the value of speed
+     */ 
+    public function getSpeed()
+    {
+        return $this->speed;
+    }
+
+    /**
+     * Set the value of speed
+     *
+     * @return  self
+     */ 
+    public function setSpeed($speed)
+    {
+        $this->speed = $speed;
+
+        return $this;
     }
 }
 
